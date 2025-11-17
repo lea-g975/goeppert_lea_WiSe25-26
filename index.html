@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Schnee Beispiel</title>
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <!-- eigenes Skript für Schnee-->
+  <script src="marker.js" defer></script>
+
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+
+<body>
+  <a-scene embedded arjs>
+
+    <a-marker type="pattern" url="pattern-rehhhh.patt" id="custom-marker">
+      
+      <a-entity id="snowContainer" visible="false"></a-entity>
+
+      <a-image src="reh.png" position="0 0.5 0"></a-image>
+
+      <a-image src="mond.png" position="0.5 1.5 0" scale="0.5 0.5 0.5"></a-image>
+
+    </a-marker>
+
+    <a-entity camera></a-entity>
+    
+  </a-scene>
+</body>
+</html>
